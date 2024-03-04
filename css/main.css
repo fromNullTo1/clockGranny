@@ -18,13 +18,13 @@ body {
 }
 
 #time {
-    font-family: "Chakra Petch", sans-serif;    
+    font-family: "Chakra Petch", sans-serif;
     font-size:142px;
     font-weight: 500;
     line-height: 1;
 }
 
-#date {
+#daytime {
     font-family: "Inter", sans-serif;
     font-size: 110px;
 }
