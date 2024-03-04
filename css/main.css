@@ -1,12 +1,46 @@
-.wrapper {
-
-    /* max-width: 800px; */
-    padding: 0 50px;
+body {
+    padding: 50px 10px 0;
     margin:0 auto;
-    padding-top: 100px;
-    font-size:142px;
 
     text-align: center;
     text-transform: uppercase;
 
+    transition: background-color 0.5s ease, color 0.5s ease;
+    color: black;
+    background: url('../img/1.webp') 0 0/cover no-repeat;
+    background-color: white;
 }
+
+.wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    background: rgba(252, 252, 252, 0.5);
+}
+#date,
+#time {
+    font-family: "Chakra Petch", sans-serif;    
+    font-size:142px;
+    line-height: 1;
+}
+
+#time {
+    font-weight: 500;
+}
+
+#daytime {
+    font-family: "Inter", sans-serif;
+    font-size: 110px;
+}
+
+.dark-mode {
+    color: rgb(194, 191, 191);
+}
+
+body.dark-mode .wrapper {
+    background: rgba(37, 37, 37, 0.8);
+}
+
+
