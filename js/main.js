@@ -1,15 +1,19 @@
 function updateDateTime() {
     const now = new Date();
-    const hours = now.getHours();
-    const minutes = now.getMinutes();
     const options = {
         hour: '2-digit',
         minute: '2-digit',
-        hour12: true
+        hour12: false
     };
 
-    document.getElementById('time').textContent = now.toLocaleTimeString([], options).replace(/ ?([AP]M|[ПД]П)$/, '');
+    let timeString = now.toLocaleTimeString([], options);
 
+    let hours = now.getHours() % 12 || 12;
+    let minutes = now.getMinutes();
+    timeString = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+
+    document.getElementById('time').textContent = timeString;
+    
     let daytime;
     if (hours < 6) {
         daytime = 'сейчас ночь';
