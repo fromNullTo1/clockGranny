@@ -8,7 +8,7 @@ function updateDateTime() {
         hour12: true
     };
 
-    document.getElementById('time').textContent = now.toLocaleTimeString([], options).replace(/ ?[AP]M$/, '');
+    document.getElementById('time').textContent = now.toLocaleTimeString([], options).replace(/ ?([AP]M|[ПД]П)$/, '');
 
     let daytime;
     if (hours < 6) {
