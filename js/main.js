@@ -1,5 +1,6 @@
 function updateDateTime() {
     const now = new Date();
+    const hours24 = now.getHours();
     const options = {
         hour: '2-digit',
         minute: '2-digit',
@@ -13,13 +14,13 @@ function updateDateTime() {
     timeString = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
 
     document.getElementById('time').textContent = timeString;
-    
+
     let daytime;
-    if (hours < 6) {
+    if (hours24 < 6) {
         daytime = 'сейчас ночь';
-    } else if (hours < 12) {
+    } else if (hours24 < 12) {
         daytime = 'сейчас утро';
-    } else if (hours < 18) {
+    } else if (hours24 < 18) {
         daytime = 'сейчас день';
     } else {
         daytime = 'сейчас вечер';
