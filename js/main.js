@@ -7,14 +7,7 @@ function updateDateTime() {
         minute: '2-digit',
         hour12: true
     };
-    const options2 = {
-        year: 'numeric',
-        month: 'long',
-        day: '2-digit'
-    };
 
-
-    document.getElementById('date').textContent = now.toLocaleDateString([], options2).replace(/\sг\.$/, '');
     document.getElementById('time').textContent = now.toLocaleTimeString([], options).replace(/ ?[AP]M$/, '');
 
     let daytime;
