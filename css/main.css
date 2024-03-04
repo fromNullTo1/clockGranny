@@ -8,7 +8,6 @@ body {
 
     transition: background-color 0.5s ease, color 0.5s ease;
     color: black;
-    background: url('../img/1.webp') 0 0/cover no-repeat;
     background-color: white;
 }
 
@@ -16,21 +15,16 @@ body {
     display: inline-flex;
     flex-direction: column;
     gap: 30px;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background: rgba(252, 252, 252, 0.5);
 }
-#date,
+
 #time {
     font-family: "Chakra Petch", sans-serif;    
     font-size:142px;
+    font-weight: 500;
     line-height: 1;
 }
 
-#time {
-    font-weight: 500;
-}
-
+#date,
 #daytime {
     font-family: "Inter", sans-serif;
     font-size: 110px;
@@ -38,10 +32,5 @@ body {
 
 .dark-mode {
     color: rgb(194, 191, 191);
+    background: #272727;
 }
-
-body.dark-mode .wrapper {
-    background: rgba(37, 37, 37, 0.8);
-}
-
-

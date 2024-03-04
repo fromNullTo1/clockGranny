@@ -7,24 +7,25 @@ function updateDateTime() {
         minute: '2-digit',
         hour12: true
     };
+    const options2 = {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit'
+    };
 
 
-    document.getElementById('date').textContent = now.toLocaleDateString();
+    document.getElementById('date').textContent = now.toLocaleDateString([], options2).replace(/\sг\.$/, '');
     document.getElementById('time').textContent = now.toLocaleTimeString([], options).replace(/ ?[AP]M$/, '');
 
     let daytime;
     if (hours < 6) {
         daytime = 'сейчас ночь';
-        document.body.style.background = '#121212';
     } else if (hours < 12) {
         daytime = 'сейчас утро';
-        document.body.style.background = 'url(img/1.webp) 0 0/cover no-repeat';
     } else if (hours < 18) {
         daytime = 'сейчас день';
-        document.body.style.background = 'url(img/2.webp) 0 0/cover no-repeat';
     } else {
         daytime = 'сейчас вечер';
-        document.body.style.background = 'url(img/3.webp) 0 0/cover no-repeat';
     }
 
     document.getElementById('daytime').textContent = daytime;
