@@ -1,17 +1,9 @@
 function updateDateTime() {
     const now = new Date();
     const hours24 = now.getHours();
-    const options = {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false
-    };
-
-    let timeString = now.toLocaleTimeString([], options);
-
-    let hours = now.getHours() % 12 || 12;
-    let minutes = now.getMinutes();
-    timeString = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    const minutes = now.getMinutes();
+    let hours = hours24 % 12 || 12;
+    let timeString = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
 
     document.getElementById('time').textContent = timeString;
 
@@ -28,6 +20,9 @@ function updateDateTime() {
 
     document.getElementById('daytime').textContent = daytime;
 
+    const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+    const dayOfWeek = daysOfWeek[now.getDay()];
+    document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
 
     if (minutes == 59) {
         adjustColors(hours);
