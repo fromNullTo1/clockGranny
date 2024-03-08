@@ -25,9 +25,11 @@ function updateDateTime() {
     const dayOfWeek = daysOfWeek[now.getDay()];
     document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
 
-    if (minutes == 59) {
-        adjustColors(hours24);
-    }
+    // if (minutes == 59) {
+    //     adjustColors(hours24);
+    // }
+    adjustColors(hours24);
+    console.log('some');
 }
 
 function adjustColors(hours) {
