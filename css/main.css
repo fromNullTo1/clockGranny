@@ -18,7 +18,7 @@ body {
 
 #time {
     font-family: "Chakra Petch", sans-serif;
-    font-size: 240px;
+    font-size: 260px;//240
     font-weight: 500;
     line-height: 1;
 }
@@ -26,7 +26,7 @@ body {
 #daytime,
 #dayOfWeek {
     font-family: "Inter", sans-serif;
-    font-size: 170px;
+    font-size: 190px;//170
 }
 
 #dayOfWeek {
