@@ -9,13 +9,13 @@ function updateDateTime() {
 
     let daytime;
     if (hours24 < 6) {
-        daytime = 'сейчас ночь';
+        daytime = 'ночь';
     } else if (hours24 < 12) {
-        daytime = 'сейчас утро';
+        daytime = 'утро';
     } else if (hours24 < 18) {
-        daytime = 'сейчас день';
+        daytime = 'день';
     } else {
-        daytime = 'сейчас вечер';
+        daytime = 'вечер';
     }
 
     document.getElementById('daytime').textContent = daytime;
