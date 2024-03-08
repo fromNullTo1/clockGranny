@@ -31,7 +31,7 @@ function updateDateTime() {
 }
 
 function adjustColors(hours) {
-    if (hours >= 22 || hours < 6) {
+    if (hours >= 21 || hours < 6) {
         document.body.classList.add("dark-mode");
     } else {
         document.body.classList.remove("dark-mode");
