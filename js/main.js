@@ -28,8 +28,7 @@ function updateDateTime() {
     // if (minutes == 59) {
     //     adjustColors(hours24);
     // }
-    adjustColors(hours24);
-    console.log('some');
+    // adjustColors(hours24);
 }
 
 function adjustColors(hours) {
@@ -40,7 +39,16 @@ function adjustColors(hours) {
     }
 }
 
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+document.body.addEventListener('click', () => {
+    toggleMode();
+});
+
 setInterval(updateDateTime, 1000);
+setInterval(adjustColors, 2000, hours24);
 setInterval(function() {
     window.location.reload();
 }, 120000);
