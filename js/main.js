@@ -26,20 +26,16 @@ function updateDateTime() {
     document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
 
     if (minutes == 59) {
-        adjustColors(hours);
+        adjustColors(hours24);
     }
 }
 
 function adjustColors(hours) {
-    if (hours >= 21 || hours < 6) {
+    if (hours >= 20 || hours < 5) {
         document.body.classList.add("dark-mode");
     } else {
         document.body.classList.remove("dark-mode");
     }
-}
-
-function toggleMode() {
-    document.body.classList.toggle("dark-mode");
 }
 
 setInterval(updateDateTime, 1000);
