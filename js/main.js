@@ -39,5 +39,8 @@ function adjustColors(hours) {
 }
 
 setInterval(updateDateTime, 1000);
+setInterval(function() {
+    window.location.reload();
+}, 120000);
 
 updateDateTime();
