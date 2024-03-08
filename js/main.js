@@ -1,4 +1,3 @@
-let
 function updateDateTime() {
     const now = new Date();
     const hours24 = now.getHours();
