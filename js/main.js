@@ -1,3 +1,4 @@
+let
 function updateDateTime() {
     const now = new Date();
     const hours24 = now.getHours();
@@ -28,7 +29,7 @@ function updateDateTime() {
     // if (minutes == 59) {
     //     adjustColors(hours24);
     // }
-    // adjustColors(hours24);
+    adjustColors(hours24);
 }
 
 function adjustColors(hours) {
@@ -49,7 +50,7 @@ document.body.addEventListener('click', () => {
 });
 
 setInterval(updateDateTime, 1000);
-setInterval(adjustColors, 2000, newDate().getHours());
+// setInterval(adjustColors, 2000, newDate().getHours());
 setInterval(function() {
     window.location.reload();
 }, 120000);
