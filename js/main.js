@@ -37,6 +37,7 @@ function adjustColors(hours) {
     } else {
         document.body.classList.remove("dark-mode");
     }
+    console.log('test');
 }
 
 function toggleMode() {
@@ -48,7 +49,7 @@ document.body.addEventListener('click', () => {
 });
 
 setInterval(updateDateTime, 1000);
-setInterval(adjustColors, 2000, hours24);
+setInterval(adjustColors, 2000, newDate().getHours());
 setInterval(function() {
     window.location.reload();
 }, 120000);
