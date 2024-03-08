@@ -1,6 +1,6 @@
 body {
     height: 100vh;
-    padding: 50px 10px 0;
+    padding: 0px 10px 0;
     margin:0 auto;
 
     text-align: center;
@@ -14,12 +14,11 @@ body {
 .wrapper {
     display: inline-flex;
     flex-direction: column;
-    gap: 30px;
 }
 
 #time {
     font-family: "Chakra Petch", sans-serif;
-    font-size:142px;
+    font-size: 240px;
     font-weight: 500;
     line-height: 1;
 }
@@ -27,11 +26,11 @@ body {
 #daytime,
 #dayOfWeek {
     font-family: "Inter", sans-serif;
-    font-size: 110px;
+    font-size: 170px;
 }
 
 #dayOfWeek {
-    padding-top: 80px;
+    padding-top: 20px;
     color: rgb(161, 3, 3);
 }
 
