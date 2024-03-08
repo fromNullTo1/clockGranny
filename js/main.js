@@ -3,7 +3,8 @@ function updateDateTime() {
     const hours24 = now.getHours();
     const minutes = now.getMinutes();
     let hours = hours24 % 12 || 12;
-    let timeString = `${hours < 10 ? '0' + hours : hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+    //hours < 10 ? '0' + hours : hours
 
     document.getElementById('time').textContent = timeString;
 
