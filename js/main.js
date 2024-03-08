@@ -24,19 +24,17 @@ function updateDateTime() {
     const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
     const dayOfWeek = daysOfWeek[now.getDay()];
     document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
-
-    // if (minutes == 59) {
-    //     adjustColors(hours24);
-    // }
-    adjustColors(hours24);
 }
 
-function adjustColors(hours) {
-    if (hours >= 20 || hours < 5) {
+function adjustColors() {
+    const hours24 = now.getHours();
+    
+    if (hours24 >= 20 || hours24 < 5) {
         document.body.classList.add("dark-mode");
     } else {
         document.body.classList.remove("dark-mode");
     }
+    
     console.log('test');
 }
 
@@ -49,7 +47,7 @@ document.body.addEventListener('click', () => {
 });
 
 setInterval(updateDateTime, 1000);
-// setInterval(adjustColors, 2000, newDate().getHours());
+setInterval(adjustColors, 2000);
 setInterval(function() {
     window.location.reload();
 }, 120000);
