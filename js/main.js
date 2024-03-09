@@ -1,114 +1,55 @@
-// function updateDateTime() {
-//     const now = new Date();
-//     const hours24 = now.getHours();
-//     const minutes = now.getMinutes();
-//     let hours = hours24 % 12 || 12;
-//     let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+document.addEventListener('DOMContentLoaded', function () {
+    function updateDateTime() {
+        const now = new Date();
+        const hours24 = now.getHours();
+        const minutes = now.getMinutes();
+        let hours = hours24 % 12 || 12;
+        let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
 
-//     document.getElementById('time').textContent = timeString;
+        document.getElementById('time').textContent = timeString;
 
-//     let daytime;
-//     if (hours24 < 6) {
-//         daytime = 'ночь';
-//     } else if (hours24 < 12) {
-//         daytime = 'утро';
-//     } else if (hours24 < 18) {
-//         daytime = 'день';
-//     } else {
-//         daytime = 'вечер';
-//     }
+        let daytime;
+        if (hours24 < 6) {
+            daytime = 'ночь';
+        } else if (hours24 < 12) {
+            daytime = 'утро';
+        } else if (hours24 < 18) {
+            daytime = 'день';
+        } else {
+            daytime = 'вечер';
+        }
 
-//     document.getElementById('daytime').textContent = daytime;
+        document.getElementById('daytime').textContent = daytime;
 
-//     const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
-//     const dayOfWeek = daysOfWeek[now.getDay()];
-//     document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
-// }
+        const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+        const dayOfWeek = daysOfWeek[now.getDay()];
 
-// function adjustColors() {
-//     const hours24 = new Date().getHours();
-    
-//     if (hours24 >= 20 || hours24 < 5) {
-//         document.body.classList.add("dark-mode");
-//     } else {
-//         document.body.classList.remove("dark-mode");
-//     }
-    
-//     console.log('test');
-// }
+        document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
 
-// function toggleMode() {
-//     document.body.classList.toggle("dark-mode");
-// }
-
-// document.body.addEventListener('click', () => {
-//     toggleMode();
-// });
-
-// setInterval(updateDateTime, 1000);
-// setInterval(adjustColors, 300000);
-// setInterval(function() {
-//     window.location.reload();
-// }, 600000);
-
-// updateDateTime();
-
-document.addEventListener('DOMContentLoaded', function() {
-function updateDateTime() {
-    const now = new Date();
-    const hours24 = now.getHours();
-    const minutes = now.getMinutes();
-    let hours = hours24 % 12 || 12;
-    let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
-
-    document.getElementById('time').textContent = timeString;
-
-    let daytime;
-    if (hours24 < 6) {
-        daytime = 'ночь';
-    } else if (hours24 < 12) {
-        daytime = 'утро';
-    } else if (hours24 < 18) {
-        daytime = 'день';
-    } else {
-        daytime = 'вечер';
+        adjustColors(hours24);
     }
 
-    document.getElementById('daytime').textContent = daytime;
-
-    const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
-    const dayOfWeek = daysOfWeek[now.getDay()];
-    
-    document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
-    
-    console.log('test1');
-}
-
-function adjustColors() {
-    const hours24 = new Date().getHours();
-    
-    if (hours24 >= 20 || hours24 < 5) {
-        document.body.classList.add("dark-mode");
-    } else {
-        document.body.classList.remove("dark-mode");
+    function adjustColors(hours) {
+        if (hours >= 21 || hours < 5) {
+            document.body.classList.add("dark-mode");
+            console.log(hours, 'add dark');
+        } else {
+            document.body.classList.remove("dark-mode");
+            console.log(hours, 'remove dark');
+        }
+        
     }
-    
-    console.log('test2');
-}
 
-function toggleMode() {
-    document.body.classList.toggle("dark-mode");
-}
+    function toggleMode() {
+        document.body.classList.toggle("dark-mode");
+    }
 
-document.body.addEventListener('click', () => {
-    toggleMode();
-});
+    document.body.addEventListener('click', () => {
+        toggleMode();
+    });
 
-setInterval(updateDateTime, 1000);
-setInterval(adjustColors, 1000);
-setInterval(function() {
-    window.location.reload();
-}, 600000);
-
-updateDateTime();
+    setInterval(updateDateTime, 5000);
+    setInterval(function () {
+        window.location.reload();
+    }, 600000);
 });
