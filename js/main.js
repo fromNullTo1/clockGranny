@@ -47,9 +47,9 @@ document.body.addEventListener('click', () => {
 });
 
 setInterval(updateDateTime, 1000);
-setInterval(adjustColors, 2000);
+setInterval(adjustColors, 300000);
 setInterval(function() {
     window.location.reload();
-}, 120000);
+}, 600000);
 
 updateDateTime();
