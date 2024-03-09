@@ -27,7 +27,7 @@ function updateDateTime() {
 }
 
 function adjustColors() {
-    const hours24 = now.getHours();
+    const hours24 = new Date().getHours();
     
     if (hours24 >= 20 || hours24 < 5) {
         document.body.classList.add("dark-mode");
