@@ -30,14 +30,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function adjustColors(hours) {
-        if (hours >= 21 || hours < 5) {
-            document.body.classList.add("dark-mode");
-            console.log(hours, 'add dark');
+        if (hours >= 20 || hours < 5) {
+            if (!document.body.classList.contains("dark-mode")) {
+                document.body.classList.add("dark-mode");
+            };
         } else {
-            document.body.classList.remove("dark-mode");
-            console.log(hours, 'remove dark');
+            if (document.body.classList.contains("dark-mode")) {
+                document.body.classList.remove("dark-mode");;
+            };
         }
-        
     }
 
     function toggleMode() {
@@ -52,4 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     setInterval(function () {
         window.location.reload();
     }, 600000);
+
+    updateDateTime();
 });
