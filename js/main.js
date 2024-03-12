@@ -3,8 +3,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const now = new Date();
         const hours24 = now.getHours();
         const minutes = now.getMinutes();
+        const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
-        let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}`;
+        let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
 
         document.getElementById('time').textContent = timeString;
 
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleMode();
     });
 
-    setInterval(updateDateTime, 5000);
+    setInterval(updateDateTime, 1000);
     setInterval(function () {
         window.location.reload();
     }, 600000);
