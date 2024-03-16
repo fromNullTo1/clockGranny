@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let hour24;
     function updateDateTime() {
         const now = new Date();
         const hours24 = now.getHours();
+        hour24 = hours24;
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
@@ -31,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function adjustColors(hours) {
-        if (hours >= 20 || hours < 5) {
+        if (hours >= 20 || hours < 7) {
             if (!document.body.classList.contains("dark-mode")) {
                 document.body.classList.add("dark-mode");
             };
@@ -52,7 +54,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(updateDateTime, 1000);
     setInterval(function () {
-        window.location.reload();
+        if (hour24 >= 20 || hour24 < 7) {
+            window.location.reload();
+        }
     }, 600000);
 
     updateDateTime();
