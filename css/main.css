@@ -26,7 +26,14 @@ body {
 #daytime,
 #dayOfWeek {
     font-family: "Inter", sans-serif;
-    font-size: 145px;//170
+}
+
+#dayOfWeek {
+    font-size: 145px;
+}
+
+#daytime {
+    font-size: 180px;
 }
 
 #dayOfWeek {
