@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     setInterval(updateDateTime, 1000);
-    setInterval(function () {
-        if (hour24 >= 20 || hour24 < 7) {
-            window.location.reload();
-        }
-    }, 600000);
+    // setInterval(function () {
+    //     if (hour24 >= 20 || hour24 < 7) {
+    //         window.location.reload();
+    //     }
+    // }, 600000);
 
     updateDateTime();
 });
