@@ -4,6 +4,9 @@ body {
     margin:0 auto;
 
     text-align: center;
+    
+    
+    text-transform: uppercase;
 
     transition: background-color 0.5s ease, color 0.5s ease;
     color: black;
@@ -33,8 +36,6 @@ body {
 
 #daytime {
     font-size: 180px;
-    
-    text-transform: uppercase;
 }
 
 #dayOfWeek {
