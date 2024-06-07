@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
         let nameHour;
+        let nameMinute;
         
 
         if (hours == 1) {
@@ -17,6 +18,14 @@ document.addEventListener('DOMContentLoaded', function () {
         } else {
             nameHour = 'часов';
         }
+
+        if (minutes % 10 == 1 && minutes != 11) {
+        nameMinute = 'минута';
+    } else if ((minutes % 10 >= 2 && minutes % 10 <= 4) && (minutes < 10 || minutes > 20)) {
+        nameMinute = 'минуты';
+    } else {
+        nameMinute = 'минут';
+    }
 
         let timeString = `${hours < 10? '0' + hours : hours} ${nameHour} <br> ${minutes < 10 ? '0' + minutes : minutes}(минуты)`;
 
