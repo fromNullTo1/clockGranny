@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
-        let timeString = `${hours} (часы) <br> ${minutes < 10 ? '0' + minutes : minutes} (минуты)`;
+        let timeString = `${hours}(часы) <br> ${minutes < 10 ? '0' + minutes : minutes}(минуты)`;
 
         document.getElementById('time').innerHTML = timeString;
 
