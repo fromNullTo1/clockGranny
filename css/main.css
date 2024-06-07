@@ -22,6 +22,10 @@ body {
     line-height: 1;
 }
 
+.fz-210 {
+    font-size: 210px;
+}
+
 #daytime,
 #dayOfWeek {
     font-family: "Inter", sans-serif;
