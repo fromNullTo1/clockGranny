@@ -7,7 +7,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
-        let timeString = `${hours < 10? '0' + hours : hours}(часы) <br> ${minutes < 10 ? '0' + minutes : minutes}(минуты)`;
+        let nameHour;
+        let timeString = `${hours < 10? '0' + hours : hours} ${nameHour} <br> ${minutes < 10 ? '0' + minutes : minutes}(минуты)`;
+
+        if (hours == 1) {
+            nameHour = 'час';
+        } else if ( hours == 2 || hours == 3 || hours == 4) {
+            nameHour = '';
+        } else {
+            nameHour = 'часов';
+        }
 
         document.getElementById('time').innerHTML = timeString;
 
