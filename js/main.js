@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         nameMinute = 'минут';
     }
 
-        let timeString = `${hours < 10? '0' + hours : hours} ${nameHour} <br> ${minutes < 10 ? '0' + minutes : minutes}(минуты)`;
+        let timeString = `${hours < 10? '0' + hours : hours} ${nameHour} <br> ${minutes < 10 ? '0' + minutes : minutes} ${nameMinute}`;
 
         document.getElementById('time').innerHTML = timeString;
 
