@@ -4,9 +4,6 @@ body {
     margin:0 auto;
 
     text-align: center;
-    
-    
-    text-transform: uppercase;
 
     transition: background-color 0.5s ease, color 0.5s ease;
     color: black;
@@ -20,7 +17,7 @@ body {
 
 #time {
     font-family: "Chakra Petch", sans-serif;
-    font-size: 190px;//240
+    font-size: 210px;//240
     font-weight: 500;
     line-height: 1;
 }
@@ -36,6 +33,7 @@ body {
 
 #daytime {
     font-size: 180px;
+    text-transform: uppercase;
 }
 
 #dayOfWeek {
