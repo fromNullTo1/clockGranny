@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (hours == 1) {
             nameHour = 'час';
         } else if ( hours == 2 || hours == 3 || hours == 4) {
-            nameHour = '';
+            nameHour = 'часа';
         } else {
             nameHour = 'часов';
         }
