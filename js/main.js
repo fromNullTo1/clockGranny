@@ -12,22 +12,15 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('time').textContent = timeString;
 
         let daytime;
-        if (hours24 < 6) {
-            daytime = 'ночь';
-        } else if (hours24 < 12) {
-            daytime = 'утро';
-        } else if (hours24 < 18) {
-            daytime = 'день';
+        if (hours24 < 7) {
+            daytime = 'СПАТЬ';
+        } else if (hours24 < 21) {
+            daytime = 'НЕ СПАТЬ';
         } else {
-            daytime = 'вечер';
+            daytime = 'СПАТЬ';
         }
 
         document.getElementById('daytime').textContent = daytime;
-
-        const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
-        const dayOfWeek = daysOfWeek[now.getDay()];
-
-        document.getElementById('dayOfWeek').textContent = `${dayOfWeek}`;
 
         adjustColors(hours24);
     }
