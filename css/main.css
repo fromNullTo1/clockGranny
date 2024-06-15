@@ -44,22 +44,8 @@ body {
     font-size: 200px;
 }
 
-#daytime,
 #dayOfWeek {
     font-family: "Inter", sans-serif;
-}
-
-#dayOfWeek {
-    font-size: 240px;
-}
-
-#daytime {
-    font-size: 180px;
-    text-transform: uppercase;
-}
-
-#dayOfWeek {
-    padding-top: 10px;
     color: rgb(161, 3, 3);
 }
 
