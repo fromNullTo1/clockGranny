@@ -23,6 +23,9 @@ body {
 .wrapper {
     display: inline-flex;
     flex-direction: column;
+    width: 1020px;
+    height: 700px;
+    border: 1px solid black;
 }
 
 #time {
