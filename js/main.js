@@ -122,6 +122,21 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleMode();
     });
 
+//----------------------------------------
+var sizeDisplay = document.createElement('div');
+    // Функция для обновления текста в div
+    function updateWindowSize() {
+        sizeDisplay.textContent = 'Ширина: ' + window.innerWidth + 'px, Высота: ' + window.innerHeight + 'px';
+    }
+    // Первоначальное обновление размера окна
+    updateWindowSize();
+    // Добавление элемента div в конец тела документа
+    document.body.appendChild(sizeDisplay);
+    // Обработчик события изменения размера окна
+    window.addEventListener('resize', updateWindowSize);
+
+        //____________--------------------------------
+
     setInterval(updateDateTime, 1000);
     // setInterval(function () {
     //     if (hour24 >= 20 || hour24 < 7) {
