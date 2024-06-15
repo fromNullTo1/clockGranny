@@ -94,12 +94,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const now = new Date();
         const hours = now.getHours();
         const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
 
         document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
         document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById('seconds').textContent = seconds < 10 ? '0' + seconds : seconds;
-
         
 
         let daytime;
