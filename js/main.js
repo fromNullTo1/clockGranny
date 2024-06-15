@@ -84,15 +84,15 @@ document.addEventListener('DOMContentLoaded', function () {
     let hour24;
     function updateDateTime() {
         // const now = new Date();
-        // const hours24 = now.getHours();
-        // hour24 = hours24;
+        const hours24 = now.getHours();
+        hour24 = hours24;
         // const minutes = now.getMinutes();
         // const seconds = now.getSeconds();
-        // let hours = hours24 % 12 || 12;
+        let hours = hours24 % 12 || 12;
         // let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
 
         const now = new Date();
-        const hours = now.getHours();
+        // const hours = now.getHours();
         const minutes = now.getMinutes();
 
         document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
