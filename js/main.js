@@ -80,6 +80,7 @@
 
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
     let hour24;
     function updateDateTime() {
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
       
-        document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
+      document.getElementById('hours').textContent = hours;
         document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
       
 
@@ -121,9 +122,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.body.addEventListener('click', () => {
         toggleMode();
     });
-
-//----------------------------------------
-var sizeDisplay = document.createElement('div');
+  
+    var sizeDisplay = document.createElement('div');
     // Функция для обновления текста в div
     function updateWindowSize() {
         sizeDisplay.textContent = 'Ширина: ' + window.innerWidth + 'px, Высота: ' + window.innerHeight + 'px';
@@ -135,8 +135,6 @@ var sizeDisplay = document.createElement('div');
     // Обработчик события изменения размера окна
     window.addEventListener('resize', updateWindowSize);
 
-        //____________--------------------------------
-
     setInterval(updateDateTime, 1000);
     // setInterval(function () {
     //     if (hour24 >= 20 || hour24 < 7) {
@@ -146,7 +144,6 @@ var sizeDisplay = document.createElement('div');
 
     updateDateTime();
 });
-
 
 
 
