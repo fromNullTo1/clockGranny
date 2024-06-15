@@ -10,6 +10,16 @@ body {
     background-color: white;
 }
 
+.colon {
+    animation: blink-animation 1s steps(2, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
 .wrapper {
     display: inline-flex;
     flex-direction: column;
