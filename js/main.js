@@ -83,34 +83,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     let hour24;
     function updateDateTime() {
-        // const now = new Date();
+        const now = new Date();
         const hours24 = now.getHours();
         hour24 = hours24;
-        // const minutes = now.getMinutes();
-        // const seconds = now.getSeconds();
-        let hours = hours24 % 12 || 12;
-        // let timeString = `${hours}:${minutes < 10 ? '0' + minutes : minutes}:${seconds < 10 ? '0' + seconds : seconds}`;
-
-        const now = new Date();
-        // const hours = now.getHours();
         const minutes = now.getMinutes();
-
+        const seconds = now.getSeconds();
+        let hours = hours24 % 12 || 12;
+      
         document.getElementById('hours').textContent = hours < 10 ? '0' + hours : hours;
         document.getElementById('minutes').textContent = minutes < 10 ? '0' + minutes : minutes;
-        
-
-        let daytime;
-        if (hours24 < 6) {
-            daytime = 'ночь';
-        } else if (hours24 < 12) {
-            daytime = 'утро';
-        } else if (hours24 < 18) {
-            daytime = 'день';
-        } else {
-            daytime = 'вечер';
-        }
-
-        document.getElementById('daytime').textContent = daytime;
+      
 
         const daysOfWeek = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
         const dayOfWeek = daysOfWeek[now.getDay()];
@@ -149,10 +131,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateDateTime();
 });
-
-
-
-
 
 
 
