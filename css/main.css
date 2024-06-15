@@ -1,7 +1,7 @@
-* {  
+* {
+  
     box-sizing: border-box;
 }
-
 body {
     height: 100vh;
     padding: 0px 10px 0;
@@ -29,12 +29,13 @@ body {
     flex-direction: column;
     width: 1020px;
     height: 700px;
+    padding-top: 40px;
     border: 1px solid black;
 }
 
 #time {
     font-family: "Chakra Petch", sans-serif;
-    font-size: 190px;//240
+    font-size: 320px;
     font-weight: 500;
     line-height: 1;
 }
@@ -49,7 +50,7 @@ body {
 }
 
 #dayOfWeek {
-    font-size: 140px;
+    font-size: 240px;
 }
 
 #daytime {
@@ -66,3 +67,4 @@ body {
     color: rgb(194, 191, 191);
     background: #272727;
 }
+
