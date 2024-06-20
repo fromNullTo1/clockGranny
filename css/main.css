@@ -34,6 +34,7 @@ body {
 }
 
 #time {
+    padding-top: 50px;
     font-family: "Chakra Petch", sans-serif;
     font-size: 320px;
     font-weight: 500;
