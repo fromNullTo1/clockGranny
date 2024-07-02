@@ -48,6 +48,13 @@ body {
 #dayOfWeek {
     font-family: "Inter", sans-serif;
     color: rgb(161, 3, 3);
+    line-height: 1;
+}
+
+#daytime {
+  font-family: "Inter", sans-serif;
+  font-size: 240px;
+  line-height: 0.7;
 }
 
 .dark-mode {
