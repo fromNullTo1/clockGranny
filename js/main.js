@@ -27,6 +27,19 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('dayOfWeek').style.fontSize = '240px';
         }
 
+        let daytime;
+        if (hours24 < 6) {
+            daytime = 'ночь';
+        } else if (hours24 < 12) {
+            daytime = 'утро';
+        } else if (hours24 < 18) {
+            daytime = 'день';
+        } else {
+            daytime = 'вечер';
+        }
+
+        document.getElementById('daytime').textContent = daytime;
+
         adjustColors(hours24);
     }
 
