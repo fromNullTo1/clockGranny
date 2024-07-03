@@ -62,3 +62,21 @@ body {
     background: #272727;
 }
 
+
+#picture {
+  position: absolute;
+  top: 0;
+/*   left: 250px; */
+  width: 1020px;
+  height: 700px;
+  background: center/contain no-repeat;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
