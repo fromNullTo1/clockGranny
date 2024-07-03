@@ -25,6 +25,7 @@ body {
 }
 
 .wrapper {
+    position: relative;
     display: inline-flex;
     flex-direction: column;
     width: 1020px;
@@ -34,7 +35,7 @@ body {
 }
 
 #time {
-    padding-left: 50px;
+    padding-left: 150px;
     font-family: "Chakra Petch", sans-serif;
     font-size: 320px;
     font-weight: 500;
@@ -66,7 +67,7 @@ body {
 #picture {
   position: absolute;
   top: 10px;
-  left: 200px;
+  left: 10px;
   width: 220px;
   height: 220px;
   background: center/contain no-repeat;
