@@ -34,7 +34,7 @@ body {
 }
 
 #time {
-    padding-top: 0;
+    padding-left: 50px;
     font-family: "Chakra Petch", sans-serif;
     font-size: 320px;
     font-weight: 500;
@@ -65,18 +65,10 @@ body {
 
 #picture {
   position: absolute;
-  top: 0;
-/*   left: 250px; */
-  width: 1020px;
-  height: 700px;
+  top: 10px;
+  left: 200px;
+  width: 220px;
+  height: 220px;
   background: center/contain no-repeat;
-}
-
-.hide {
-  display: none;
-}
-
-.show {
-  display: block;
 }
 
