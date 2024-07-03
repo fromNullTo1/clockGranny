@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('daytime').textContent = daytime;
 
         adjustColors(hours24);
+        changePicture(hours24);
     }
 
     function adjustColors(hours) {
@@ -63,7 +64,25 @@ document.addEventListener('DOMContentLoaded', function () {
         toggleMode();
     });
 
+    function changePicture(hours) {
+        if (hours >= 21 || hours < 7) {
+            document.querySelector('#picture').style.backgroundImage = "url('sleep.jpg')"
+        } else {
+            document.querySelector('#picture').style.backgroundImage = "url('wake.jpg')"
+        }
+    }
+
     setInterval(updateDateTime, 1000);
+    function changeContent() {
+        let info = document.querySelector('#info');
+        let pict = document.querySelector('#picture');
+        info.classList.toggle('show');
+        info.classList.toggle('hide');
+        pict.classList.toggle('show');
+        pict.classList.toggle('hide');
+    }
+
+    setInterval(changeContent, 5000);
 
     updateDateTime();
 });
