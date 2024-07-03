@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function () {
     let hour24;
 
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const hours24 = now.getHours();
         hour24 = hours24;
         const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
         let hours = hours24 % 12 || 12;
 
         document.getElementById('hours').textContent = hours;
@@ -41,48 +39,23 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('daytime').textContent = daytime;
 
         adjustColors(hours24);
-        changePicture(hours24);
     }
 
     function adjustColors(hours) {
-        if (hours >= 20 || hours < 7) {
+        if (hours >= 21 || hours < 7) {
             if (!document.body.classList.contains("dark-mode")) {
                 document.body.classList.add("dark-mode");
             };
+            document.querySelector('#picture').style.backgroundImage = "url('moon.png')";
         } else {
             if (document.body.classList.contains("dark-mode")) {
-                document.body.classList.remove("dark-mode");;
+                document.body.classList.remove("dark-mode");
             };
-        }
-    }
-
-    function toggleMode() {
-        document.body.classList.toggle("dark-mode");
-    }
-
-    document.body.addEventListener('click', () => {
-        toggleMode();
-    });
-
-    function changePicture(hours) {
-        if (hours >= 21 || hours < 7) {
-            document.querySelector('#picture').style.backgroundImage = "url('sleep.jpg')"
-        } else {
-            document.querySelector('#picture').style.backgroundImage = "url('wake.jpg')"
+            document.querySelector('#picture').style.backgroundImage = "url('sun.png')";
         }
     }
 
     setInterval(updateDateTime, 1000);
-    function changeContent() {
-        let info = document.querySelector('#info');
-        let pict = document.querySelector('#picture');
-        info.classList.toggle('show');
-        info.classList.toggle('hide');
-        pict.classList.toggle('show');
-        pict.classList.toggle('hide');
-    }
-
-    setInterval(changeContent, 5000);
 
     updateDateTime();
 });
